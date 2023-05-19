@@ -1,5 +1,5 @@
 interface IGearInput<Y> {
-    number: Y
+    name: Y
 }
 
 export type { IGearInput }

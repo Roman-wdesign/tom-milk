@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import MainGearInput from '@/Gear/gear-Inputs/MainGearInput.vue'
 
-const message = ref('123')
+const message = ref('')
 </script>
 
 <template>
