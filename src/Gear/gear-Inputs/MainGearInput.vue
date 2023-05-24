@@ -6,25 +6,19 @@ export interface Props {
 }
 const props = defineProps<Props>()
 
-const emit = defineEmits<{
-  //(e: 'update:modelValue', number: string): void
-  updateValue: [name: string]
-}>()
+const emit = defineEmits(['update:modelValue'])
 
-//defineProps(['modelValue'])
-
-//const emit = defineEmits(['update:modelValue'])
-
-const updateValue = (e: Event) => {
-  emit('updateValue', (e.target as HTMLInputElement).value)
+const updateValue = (event: Event) => {
+  emit('update:modelValue', (event.target as HTMLInputElement).value)
 }
 </script>
 
 <template>
+  <slot name="header"></slot>
   <input
-    class="border-2 border-amber-800"
+    class="input border-2 border-amber-800"
     :placeholder="props.label"
-    type="number"
+    type="input"
     :value="modelValue"
     @input="updateValue"
   />
