@@ -14,7 +14,7 @@ const updateValue = (event: Event) => {
 </script>
 
 <template>
-  <slot name="header"></slot>
+  <div class="mr-4"><slot name="header"></slot></div>
   <input
     class="input border-2 border-amber-800"
     :placeholder="props.label"

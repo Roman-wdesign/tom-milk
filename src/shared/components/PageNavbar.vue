@@ -13,7 +13,7 @@ const viewPosition: viewPos = reactive({
 })
 // change opacity of navbar, when scrolling
 const handleScroll = () => {
-  if (window.pageYOffset > 0) {
+  if (window.scrollY > 0) {
     if (viewPosition.topOfPage) viewPosition.topOfPage = false
   } else {
     if (!viewPosition.topOfPage) viewPosition.topOfPage = true
