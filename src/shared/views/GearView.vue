@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import MainGearInput from '@/Gear/gear-Inputs/MainGearInput.vue'
+import { fatSourCream } from '@/shared/helpers/vars'
+import { firstSourCream } from '@/shared/helpers/vars'
 
-const firstMessageInput = ref('')
-const secondMessageInput = ref('')
-const thirdMessageInput = ref('')
-const fifthMessageInput = ref('')
+const firstMessageInput = ref(0)
+const secondMessageInput = ref(0)
+const thirdMessageInput = ref(0)
+const fifthMessageInput = ref(0)
+const inputFormulaFirst = computed(() => (firstMessageInput.value * firstSourCream) / fatSourCream)
 </script>
 
 <template>
@@ -22,7 +25,7 @@ const fifthMessageInput = ref('')
           <MainGearInput label="введите число" v-model.number="firstMessageInput">
             <template #header>Сметана 10%</template>
           </MainGearInput>
-          <div class="font-semibold text-lg">{{ firstMessageInput }}</div>
+          <div class="font-semibold text-lg">{{ inputFormulaFirst }}</div>
         </div>
       </div>
 
