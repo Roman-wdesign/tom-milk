@@ -11,20 +11,22 @@ const firstMessageInput = ref(0)
 const secondMessageInput = ref(0)
 const thirdMessageInput = ref(0)
 const fifthMessageInput = ref(0)
-const inputFormulaFirst = computed(() =>
+const inputFormulaFirst = computed<number>(() =>
   Math.round(firstMessageInput.value - (firstMessageInput.value * firstSourCream) / fatSourCream)
 )
 
-const inputFormulaSecond = computed(() =>
+const inputFormulaSecond = computed<number>(() =>
   Math.round(secondMessageInput.value - (secondMessageInput.value * secondSourCream) / fatSourCream)
 )
 
-const inputFormulaThird = computed(() => Math.round(thirdMessageInput.value / thirdSourCream))
+const inputFormulaThird = computed<number>(() =>
+  Math.round(thirdMessageInput.value / thirdSourCream)
+)
 
-const inputFormulaFifth = computed(() =>
+const inputFormulaFifth = computed<number>(() =>
   Math.round(fifthMessageInput.value - (fifthMessageInput.value * fifthSourCream) / fatSourCream)
 )
-const totalFormula = computed(
+const totalFormula = computed<number>(
   () =>
     inputFormulaFirst.value +
     inputFormulaSecond.value +
