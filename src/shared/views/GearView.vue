@@ -5,7 +5,7 @@ import { fatSourCream } from '@/shared/helpers/vars'
 import { firstSourCream } from '@/shared/helpers/vars'
 import { secondSourCream } from '@/shared/helpers/vars'
 import { thirdSourCream } from '@/shared/helpers/vars'
-import { fifthSourCream } from '@/shared/helpers/vars'
+import { fourthSourCream } from '@/shared/helpers/vars'
 
 const firstMessageInput = ref(0)
 const secondMessageInput = ref(0)
@@ -23,15 +23,15 @@ const inputFormulaThird = computed<number>(() =>
   Math.round(thirdMessageInput.value / thirdSourCream)
 )
 
-const inputFormulaFifth = computed<number>(() =>
-  Math.round(fifthMessageInput.value - (fifthMessageInput.value * fifthSourCream) / fatSourCream)
+const inputFormulaFourth = computed<number>(() =>
+  Math.round(fifthMessageInput.value - (fifthMessageInput.value * fourthSourCream) / fatSourCream)
 )
 const totalFormula = computed<number>(
   () =>
     inputFormulaFirst.value +
     inputFormulaSecond.value +
     inputFormulaThird.value +
-    inputFormulaFifth.value
+    inputFormulaFourth.value
 )
 </script>
 
@@ -76,7 +76,7 @@ const totalFormula = computed<number>(
           <MainGearInput label="введите число" v-model.number="fifthMessageInput">
             <template #header>Сметана 25%</template>
           </MainGearInput>
-          <div class="font-semibold text-lg">{{ inputFormulaFifth }}</div>
+          <div class="font-semibold text-lg">{{ inputFormulaFourth }}</div>
         </div>
       </div>
     </div>
