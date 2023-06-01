@@ -71,6 +71,15 @@ onBeforeMount(() => {
         >
           Аппаратный
         </RouterLink>
+
+        <a
+          class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-blue-400 sm:mt-0 sm:ml-2"
+          @click="isOpen = !isOpen"
+          href="https://github.com/Roman-wdesign/tom-milk"
+          target="_blank"
+        >
+          GitHub</a
+        >
       </nav>
     </header>
   </div>
