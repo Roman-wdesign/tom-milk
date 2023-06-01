@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { IGearInput } from '@/shared/models/GearModel'
 export interface Props {
-  modelValue: IGearInput<number>
+  modelValue: number
   label: string
 }
 const props = defineProps<Props>()
