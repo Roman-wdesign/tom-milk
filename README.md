@@ -1,6 +1,7 @@
 # Tom Milk
 
 + Калькулятор обрата  
++ node version 18.13.0
 
 ## Recommended IDE Setup
 
