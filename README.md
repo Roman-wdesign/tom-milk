@@ -1,6 +1,6 @@
 # Tom Milk
 
-+ Калькулятор обрата  
++ Калькулятор обрата, объема сырого молока  
 + node version 18.13.0
 
 ## Recommended IDE Setup
