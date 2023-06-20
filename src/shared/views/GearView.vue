@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import Obrat from '@/shared/views/GearCalcSour.vue'
-import Raw from '@/shared/views/GearRawView.vue'
+import { shallowRef } from 'vue'
+import Обрат from '@/shared/views/GearCalcSour.vue'
+import Сырое from '@/shared/views/GearRawView.vue'
 
-const currentTab = ref('Home')
-const tabs = { Obrat, Raw }
+const tabs = [
+  { name: 'Обрат', comp: Обрат },
+  { name: 'Сырое', comp: Сырое }
+]
+const currentTab = shallowRef(tabs[0])
 </script>
 
 <template>
@@ -15,19 +18,19 @@ const tabs = { Obrat, Raw }
     <div class="demo flex flex-row justify-center mt-16">
       <div>
         <button
-          v-for="(index, tab) in tabs"
-          class="px-6 py-2 mx-4 my-2 rounded-full focus:bg-blue-700 hover:bg-emerald-500 bg-blue-400 text-slate-100"
-          :key="tab"
-          :class="['tab-button', { active: currentTab === tab }]"
-          @click="currentTab = tab"
+          v-for="(tab, i) in tabs"
+          class="px-6 py-2 border border-sky-500 rounded focus:bg-blue-700 hover:bg-gray-400 bg-gray-200 text-slate-700"
+          :key="tab.name"
+          :class="['bind', { active: currentTab.name === tab.name }]"
+          @click="currentTab = tabs[i]"
         >
-          {{ tab }}
+          {{ tab.name }}
         </button>
       </div>
     </div>
     <div>
       <KeepAlive>
-        <component :is="tabs[currentTab]" class="tab"></component>
+        <component :is="currentTab.comp"></component>
       </KeepAlive>
     </div>
   </div>
