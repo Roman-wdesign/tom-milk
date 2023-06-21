@@ -22,7 +22,7 @@ const currentTab = ref(tabs[0])
           v-for="(tab, i) in tabs"
           :key="tab.name"
           class="px-6 py-2 border border-sky-500 rounded text-slate-700"
-          :class="{ 'bg-blue-700': tab.name === currentTab.name }"
+          :class="{ 'bg-blue-400': tab.name === currentTab.name }"
           @click="currentTab = tabs[i]"
         >
           {{ tab.name }}
