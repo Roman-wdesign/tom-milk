@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { shallowRef, onMounted } from 'vue'
+import { ref } from 'vue'
 import Обрат from '@/shared/views/GearCalcSour.vue'
 import Сырое from '@/shared/views/GearRawView.vue'
 
@@ -8,10 +8,7 @@ const tabs = [
   { name: 'Сырое', comp: Сырое }
 ]
 
-const currentTab = shallowRef(tabs[0])
-onMounted(() => {
-  currentTab.value
-})
+const currentTab = ref(tabs[0])
 </script>
 
 <template>
@@ -19,13 +16,13 @@ onMounted(() => {
     <div class="flex justify-center">
       <h1 class="text-2xl md:text-3xl lg:text-4xl mt-16">Посчитать</h1>
     </div>
-    <div class="demo flex flex-row justify-center mt-16">
+    <div class="flex flex-row justify-center mt-16">
       <div>
         <button
           v-for="(tab, i) in tabs"
-          class="px-6 py-2 border border-sky-500 rounded focus-within:bg-blue-700 hover:bg-gray-400 bg-gray-200 text-slate-700"
           :key="tab.name"
-          :class="['bind', { active: currentTab.name === tab.name }]"
+          class="px-6 py-2 border border-sky-500 rounded text-slate-700"
+          :class="{ 'bg-blue-700': tab.name === currentTab.name }"
           @click="currentTab = tabs[i]"
         >
           {{ tab.name }}
