@@ -36,8 +36,8 @@ const totalFormula = computed<number>(
 </script>
 
 <template>
-  <div class="container mx-auto">
-    <div class="flex justify-center mt-6 my-4">
+  <div class="container mx-auto bg-blue-300">
+    <div class="flex justify-center">
       <h5 class="text-2xl mt-16">Калькулятор обрата</h5>
     </div>
     <div class="flex justify-center my-8 font-bold">

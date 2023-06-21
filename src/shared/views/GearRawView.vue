@@ -18,8 +18,8 @@ const totalCalcRawMilk = computed<number>(() =>
 </script>
 
 <template>
-  <div class="container mx-auto">
-    <div class="flex justify-center mt-6 my-4">
+  <div class="container mx-auto bg-blue-300">
+    <div class="flex justify-center">
       <h5 class="mt-16">Калькулятор обьема сырого молока</h5>
     </div>
     <div class="flex justify-center my-8 font-bold">

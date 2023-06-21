@@ -12,7 +12,7 @@ const currentTab = ref(tabs[0])
 </script>
 
 <template>
-  <div class="container mx-auto">
+  <div class="container mx-auto px-4">
     <div class="flex justify-center">
       <h1 class="text-2xl md:text-3xl lg:text-4xl mt-16">Посчитать</h1>
     </div>
@@ -21,8 +21,8 @@ const currentTab = ref(tabs[0])
         <button
           v-for="(tab, i) in tabs"
           :key="tab.name"
-          class="px-6 py-2 border border-sky-500 rounded text-slate-700"
-          :class="{ 'bg-blue-400': tab.name === currentTab.name }"
+          class="px-6 py-2 rounded-none text-slate-700"
+          :class="{ 'bg-blue-300': tab.name === currentTab.name }"
           @click="currentTab = tabs[i]"
         >
           {{ tab.name }}
