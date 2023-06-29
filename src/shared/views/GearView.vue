@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import Обрат from '@/shared/views/GearCalcSour.vue'
-import Сырое from '@/shared/views/GearRawView.vue'
+import Обрат from '@/Gear/GearCalcSour.vue'
+import Сырое from '@/Gear/GearRaw.vue'
 
 const tabs = [
   { name: 'Обрат', comp: Обрат },
