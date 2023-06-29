@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { IGearInput } from '@/shared/models/GearModel'
 export interface Props {
   modelValue: number
   label: string
