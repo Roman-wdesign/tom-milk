@@ -2,10 +2,12 @@
 import { ref } from 'vue'
 import Обрат from '@/Gear/GearCalcSour.vue'
 import Сырое from '@/Gear/GearRaw.vue'
+import Жир from '@/Gear/GearMilkVolumeFat.vue'
 
 const tabs = [
   { name: 'Обрат', comp: Обрат },
-  { name: 'Сырое', comp: Сырое }
+  { name: 'Сырое', comp: Сырое },
+  { name: 'Жир', comp: Жир },
 ]
 
 const currentTab = ref(tabs[0])
@@ -18,7 +20,7 @@ const currentTab = ref(tabs[0])
     </div>
     <div class="flex flex-row justify-center mt-16">
       <div>
-        <button v-for="(tab, i) in tabs" :key="tab.name" class="px-6 py-2 rounded-none text-slate-700"
+        <button v-for="(tab, i) in tabs" :key="tab.name" class="px-8 py-2 rounded-none text-slate-700"
           :class="{ 'bg-blue-300': tab.name === currentTab.name }" @click="currentTab = tabs[i]">
           {{ tab.name }}
         </button>
