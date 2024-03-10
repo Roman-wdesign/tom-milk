@@ -14,7 +14,9 @@ const finalProduct = computed<number>(() => volumeMilkReqInput.value * volumeFat
 const currentProduct = computed<number>(() => volumeMilkAvailInput.value * volumeFatAvailInput.value); // y= j*c
 const overProduct = computed<number>(() => finalProduct.value - currentProduct.value); // z= x-y
 const overVolume = computed<number>(() => volumeMilkReqInput.value - volumeMilkAvailInput.value)   //v= i-j
-const overFat = computed<number>(() => overProduct.value / overVolume.value);//F
+const overFat = computed<number>(() => Number(overProduct.value / overVolume.value));// f=z/v
+
+
 </script>
 
 
@@ -24,7 +26,7 @@ const overFat = computed<number>(() => overProduct.value / overVolume.value);//F
             <h5 class="text-xl mt-16">Нужный жир в танке</h5>
         </div>
         <div class="flex justify-center my-8 font-bold">
-            <h3>Итого: {{ overFat.toFixed(2) }} %</h3>
+            <h3>Итого: {{ overFat.toFixed(1) }} %</h3>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div class="first__block flex justify-center my-4">
