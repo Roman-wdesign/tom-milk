@@ -23,7 +23,7 @@ const overFat = computed<number>(() => Number(overProduct.value / overVolume.val
 <template>
     <div class="container mx-auto bg-blue-300">
         <div class="flex justify-center">
-            <h5 class="text-xl mt-16">Нужный жир в танке</h5>
+            <h5 class="mt-16">Нужный жир в танке</h5>
         </div>
         <div class="flex justify-center my-8 font-bold">
             <h3>Итого: {{ overFat.toFixed(1) }} %</h3>
