@@ -10,11 +10,11 @@ const volumeFatAvailInput = ref(0); // c
 
 
 
-const finalProduct = computed<number>(() => volumeMilkReqInput.value * volumeFatReqInput.value); // x= i*k
-const currentProduct = computed<number>(() => volumeMilkAvailInput.value * volumeFatAvailInput.value); // y= j*c
-const overProduct = computed<number>(() => finalProduct.value - currentProduct.value); // z= x-y
-const overVolume = computed<number>(() => volumeMilkReqInput.value - volumeMilkAvailInput.value)   //v= i-j
-const overFat = computed<number>(() => Number(overProduct.value / overVolume.value));// f=z/v
+const finalProduct = computed<number>(() => Math.round(volumeMilkReqInput.value * volumeFatReqInput.value)); // x= i*k
+const currentProduct = computed<number>(() => Math.round(volumeMilkAvailInput.value * volumeFatAvailInput.value)); // y= j*c
+const overProduct = computed<number>(() => Math.round(finalProduct.value - currentProduct.value)); // z= x-y
+const overVolume = computed<number>(() => Math.round(volumeMilkReqInput.value - volumeMilkAvailInput.value))   //v= i-j
+const overFat = computed<number>(() => Math.round(overProduct.value / overVolume.value));// f=z/v
 
 
 </script>
@@ -26,7 +26,7 @@ const overFat = computed<number>(() => Number(overProduct.value / overVolume.val
             <h5 class="mt-16">Нужный жир в танке</h5>
         </div>
         <div class="flex justify-center my-8 font-bold">
-            <h3>Итого: {{ overFat.toFixed(1) }} %</h3>
+            <h3>Итого: {{ ~~overFat.toFixed(1) }} %</h3>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div class="first__block flex justify-center my-4">
