@@ -13,9 +13,18 @@
           </RouterLink>
         </div>
         <div class="flex justify-center my-4">
-          <a class="mt-1 block px-2 py-1 text-cyan-600 font-semibold sm:mt-0 sm:ml-2"
-            href="https://github.com/Roman-wdesign/tom-milk" target="_blank">
-            GitHub</a>
+          <RouterLink class="active:text-emerald-600 text-cyan-600 active:opacity-75" to="/finn">
+            <p>Финнпак</p>
+          </RouterLink>
+        </div>
+        <div class="flex justify-center my-4">
+          <a
+            class="mt-1 block px-2 py-1 text-cyan-600 font-semibold sm:mt-0 sm:ml-2"
+            href="https://github.com/Roman-wdesign/tom-milk"
+            target="_blank"
+          >
+            GitHub</a
+          >
         </div>
       </div>
     </div>

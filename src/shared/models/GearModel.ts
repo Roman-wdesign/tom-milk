@@ -1,5 +1,5 @@
 interface IGearInput<Y> {
-    quantity: Y
+  quantity: Y
 }
 
 export type { IGearInput }
