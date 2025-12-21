@@ -54,7 +54,7 @@ const computedLama = computed(() => {
     </div>
     <div class="flex-col justify-center mb-5">
       <h3 class="text-slate-700 text-decoration-line: underline">14 дней</h3>
-      <h3 class="text-slate-700">Лама, "Только Молоко"</h3>
+      <h3 class="text-slate-700">Лама, Только Молоко, Коровкино, Красная цена (кефир и молоко)</h3>
 
       <h5 class="text-slate-700 font-bold">{{ computedTomorrow.toLocaleString() }}</h5>
       <h5 class="text-slate-700 font-bold">{{ computedLama.toLocaleString() }}</h5>
